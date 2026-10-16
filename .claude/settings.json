@@ -1,0 +1,17 @@
+{
+  "env": {
+    "DO_NOT_TRACK": "1",
+    "HYPERFRAMES_NO_TELEMETRY": "1",
+    "REMOTION_DISABLE_TELEMETRY": "1"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          { "type": "command", "command": "bash \"$CLAUDE_PROJECT_DIR\"/scripts/setup.sh" }
+        ]
+      }
+    ]
+  }
+}
